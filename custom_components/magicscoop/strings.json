@@ -1,0 +1,250 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "MagicScoop Account",
+        "description": "Enter the email of the MagicScoop account. A verification code will be sent to this email.",
+        "data": {
+          "email": "Email"
+        },
+        "data_description": {
+          "email": "The email you use to log into the MagicScoop app."
+        }
+      },
+      "code": {
+        "title": "Verification Code",
+        "description": "Enter the 6-digit code from the e-mail.",
+        "data": {
+          "code": "Verification code"
+        }
+      },
+      "devices": {
+        "title": "Select Litter Boxes",
+        "description": "Pick the cat litter boxes to add. Water fountains are ignored.",
+        "data": {
+          "devices": "Devices"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the MagicScoop cloud.",
+      "invalid_code": "Invalid or expired verification code.",
+      "code_format": "The verification code must be 6 digits.",
+      "account_not_found": "Account not found. Check the email address.",
+      "cloud_error": "MagicScoop cloud error: {message}",
+      "no_devices": "No cat litter box found on this account.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This account is already added."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Devices",
+        "description": "Re-select which litter boxes belong to this account.",
+        "data": {
+          "devices": "Devices"
+        }
+      }
+    },
+    "error": {
+      "no_devices": "Select at least one device."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "status": {
+        "name": "Status",
+        "state": {
+          "starting": "Starting",
+          "aligning": "Aligning",
+          "packing": "Packing",
+          "standby": "Standby",
+          "resetting": "Resetting",
+          "occupied": "Occupied",
+          "clumping": "Clumping",
+          "auto_clean": "Auto clean",
+          "manual_clean": "Manual clean",
+          "periodic_clean": "Periodic clean",
+          "remote_clean": "Remote clean",
+          "sterilizing": "Sterilizing",
+          "replacing_trash_bag": "Replacing trash bag",
+          "wifi_setting": "Wi-Fi setup",
+          "ota": "OTA",
+          "waste_full": "Waste full",
+          "factory_test": "Factory test",
+          "durability_test": "Durability test",
+          "rotate_test": "Rotate test",
+          "ready": "Ready",
+          "unknown": "Unknown"
+        }
+      },
+      "sub_status": {
+        "name": "Sub status",
+        "state": {
+          "running": "Running",
+          "finished": "Finished",
+          "paused": "Paused",
+          "occupied": "Occupied",
+          "interrupted": "Interrupted",
+          "move_pinched": "Move pinched, retry",
+          "rotate_pinched": "Rotate pinched, retry",
+          "pinched": "Pinched",
+          "timeout": "Timeout",
+          "unknown": "Unknown"
+        }
+      },
+      "litter_volume": {
+        "name": "Litter level",
+        "state": {
+          "unknown": "Unknown",
+          "insufficient": "Insufficient",
+          "less": "Less",
+          "appropriate": "Appropriate",
+          "sufficient": "Sufficient",
+          "full": "Full",
+          "overload": "Overload",
+          "invalid": "Invalid"
+        }
+      },
+      "elapsed_time": {
+        "name": "Elapsed time"
+      },
+      "clean_times": {
+        "name": "Cleans this month"
+      },
+      "firmware_version": {
+        "name": "Firmware version"
+      },
+      "rssi": {
+        "name": "Wi-Fi signal"
+      },
+      "dc": {
+        "name": "Motor current"
+      },
+      "tof_position": {
+        "name": "ToF position"
+      },
+      "rotate_angle": {
+        "name": "Rotate angle"
+      },
+      "rotate_speed": {
+        "name": "Rotate speed"
+      }
+    },
+    "binary_sensor": {
+      "cat_present": {
+        "name": "Cat present"
+      },
+      "waste_full": {
+        "name": "Waste bin full"
+      },
+      "cleaning": {
+        "name": "Cleaning"
+      }
+    },
+    "button": {
+      "start_clean": {
+        "name": "Start clean"
+      },
+      "pause": {
+        "name": "Pause"
+      },
+      "reset": {
+        "name": "Reset"
+      },
+      "sterilize": {
+        "name": "Sterilize"
+      }
+    },
+    "select": {
+      "CleanMode": {
+        "name": "Clean mode",
+        "state": {
+          "auto": "Auto",
+          "manual": "Manual",
+          "periodic": "Periodic"
+        }
+      },
+      "ClumpingTime": {
+        "name": "Clumping time",
+        "state": {
+          "5": "5 minutes",
+          "10": "10 minutes",
+          "20": "20 minutes",
+          "40": "40 minutes",
+          "60": "60 minutes"
+        }
+      },
+      "PeriodicMode": {
+        "name": "Periodic mode",
+        "state": {
+          "off": "Off",
+          "every_2h": "Every 2 hours",
+          "every_4h": "Every 4 hours",
+          "every_6h": "Every 6 hours",
+          "every_8h": "Every 8 hours",
+          "every_12h": "Every 12 hours"
+        }
+      },
+      "SleepMode": {
+        "name": "Sleep mode",
+        "state": {
+          "off": "Off",
+          "six": "6 hours",
+          "seven": "7 hours",
+          "eight": "8 hours",
+          "nine": "9 hours"
+        }
+      }
+    },
+    "switch": {
+      "CleanUVEnable": {
+        "name": "UV sterilize"
+      },
+      "TwiceDumping": {
+        "name": "Twice dumping"
+      },
+      "VibrateScooper": {
+        "name": "Vibrate scooper"
+      },
+      "DisableRearPIR": {
+        "name": "Disable rear PIR"
+      },
+      "StepMatCheck": {
+        "name": "Step mat check"
+      },
+      "SleepCleanDisable": {
+        "name": "No clean while sleeping"
+      },
+      "SleepLightOpen": {
+        "name": "Light during sleep"
+      },
+      "SleepRingLightOff": {
+        "name": "Ring light off at night"
+      }
+    },
+    "number": {
+      "PeriodicActionHour": {
+        "name": "Periodic start hour"
+      },
+      "PeriodicActionMin": {
+        "name": "Periodic start minute"
+      },
+      "PeriodicActionStopHour": {
+        "name": "Periodic stop hour"
+      },
+      "PeriodicActionStopMin": {
+        "name": "Periodic stop minute"
+      },
+      "SleepStartHour": {
+        "name": "Sleep start hour"
+      },
+      "SleepStartMin": {
+        "name": "Sleep start minute"
+      }
+    }
+  }
+}

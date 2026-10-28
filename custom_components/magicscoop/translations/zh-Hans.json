@@ -1,0 +1,250 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "MagicScoop 账号",
+        "description": "输入 MagicScoop 账号的电子邮箱，系统会发送验证码到这个邮箱。",
+        "data": {
+          "email": "电子邮箱"
+        },
+        "data_description": {
+          "email": "你在 MagicScoop App 登录时使用的邮箱。"
+        }
+      },
+      "code": {
+        "title": "验证码",
+        "description": "请输入邮件中的 6 位数字验证码。",
+        "data": {
+          "code": "验证码"
+        }
+      },
+      "devices": {
+        "title": "选择猫砂机",
+        "description": "选择要加入的猫砂机，饮水机会被忽略。",
+        "data": {
+          "devices": "设备"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "连接到 MagicScoop 云端失败。",
+      "invalid_code": "验证码无效或已过期。",
+      "code_format": "验证码必须是 6 位数字。",
+      "account_not_found": "找不到此账号，请确认电子邮箱是否正确。",
+      "cloud_error": "MagicScoop 云端错误：{message}",
+      "no_devices": "这个账号没有找到猫砂机。",
+      "unknown": "发生未预期的错误。"
+    },
+    "abort": {
+      "already_configured": "这个账号已经添加过了。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "设备",
+        "description": "重新选择这个账号下的猫砂机。",
+        "data": {
+          "devices": "设备"
+        }
+      }
+    },
+    "error": {
+      "no_devices": "至少选择一台设备。"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "status": {
+        "name": "状态",
+        "state": {
+          "starting": "启动中",
+          "aligning": "对齐中",
+          "packing": "压砂中",
+          "standby": "待机",
+          "resetting": "复位中",
+          "occupied": "有猫进入",
+          "clumping": "结块等待",
+          "auto_clean": "自动清砂",
+          "manual_clean": "手动清砂",
+          "periodic_clean": "定时清砂",
+          "remote_clean": "远程清砂",
+          "sterilizing": "消毒中",
+          "replacing_trash_bag": "更换垃圾袋",
+          "wifi_setting": "Wi-Fi 设置",
+          "ota": "OTA 升级",
+          "waste_full": "集便盒已满",
+          "factory_test": "出厂测试",
+          "durability_test": "耐久测试",
+          "rotate_test": "旋转测试",
+          "ready": "就绪",
+          "unknown": "未知"
+        }
+      },
+      "sub_status": {
+        "name": "子状态",
+        "state": {
+          "running": "执行中",
+          "finished": "已完成",
+          "paused": "已暂停",
+          "occupied": "有猫进入",
+          "interrupted": "已中断",
+          "move_pinched": "移动夹到，重试",
+          "rotate_pinched": "旋转夹到，重试",
+          "pinched": "夹住",
+          "timeout": "超时",
+          "unknown": "未知"
+        }
+      },
+      "litter_volume": {
+        "name": "猫砂量",
+        "state": {
+          "unknown": "未知",
+          "insufficient": "不足",
+          "less": "偏少",
+          "appropriate": "适当",
+          "sufficient": "足够",
+          "full": "充足",
+          "overload": "过量",
+          "invalid": "无效"
+        }
+      },
+      "elapsed_time": {
+        "name": "已运行时间"
+      },
+      "clean_times": {
+        "name": "本月清砂次数"
+      },
+      "firmware_version": {
+        "name": "固件版本"
+      },
+      "rssi": {
+        "name": "Wi-Fi 信号"
+      },
+      "dc": {
+        "name": "马达电流"
+      },
+      "tof_position": {
+        "name": "ToF 位置"
+      },
+      "rotate_angle": {
+        "name": "旋转角度"
+      },
+      "rotate_speed": {
+        "name": "旋转速度"
+      }
+    },
+    "binary_sensor": {
+      "cat_present": {
+        "name": "有猫进入"
+      },
+      "waste_full": {
+        "name": "集便盒已满"
+      },
+      "cleaning": {
+        "name": "清砂中"
+      }
+    },
+    "button": {
+      "start_clean": {
+        "name": "开始清砂"
+      },
+      "pause": {
+        "name": "暂停"
+      },
+      "reset": {
+        "name": "复位"
+      },
+      "sterilize": {
+        "name": "消毒"
+      }
+    },
+    "select": {
+      "CleanMode": {
+        "name": "清砂模式",
+        "state": {
+          "auto": "自动",
+          "manual": "手动",
+          "periodic": "定时"
+        }
+      },
+      "ClumpingTime": {
+        "name": "结块时间",
+        "state": {
+          "5": "5 分钟",
+          "10": "10 分钟",
+          "20": "20 分钟",
+          "40": "40 分钟",
+          "60": "60 分钟"
+        }
+      },
+      "PeriodicMode": {
+        "name": "定时模式",
+        "state": {
+          "off": "关闭",
+          "every_2h": "每 2 小时",
+          "every_4h": "每 4 小时",
+          "every_6h": "每 6 小时",
+          "every_8h": "每 8 小时",
+          "every_12h": "每 12 小时"
+        }
+      },
+      "SleepMode": {
+        "name": "夜间模式",
+        "state": {
+          "off": "关闭",
+          "six": "6 小时",
+          "seven": "7 小时",
+          "eight": "8 小时",
+          "nine": "9 小时"
+        }
+      }
+    },
+    "switch": {
+      "CleanUVEnable": {
+        "name": "UV 消毒"
+      },
+      "TwiceDumping": {
+        "name": "两次倾倒"
+      },
+      "VibrateScooper": {
+        "name": "铲子震动"
+      },
+      "DisableRearPIR": {
+        "name": "停用后方红外"
+      },
+      "StepMatCheck": {
+        "name": "踏垫检测"
+      },
+      "SleepCleanDisable": {
+        "name": "睡眠时不清砂"
+      },
+      "SleepLightOpen": {
+        "name": "睡眠时开灯"
+      },
+      "SleepRingLightOff": {
+        "name": "夜间关闭环形灯"
+      }
+    },
+    "number": {
+      "PeriodicActionHour": {
+        "name": "定时开始小时"
+      },
+      "PeriodicActionMin": {
+        "name": "定时开始分钟"
+      },
+      "PeriodicActionStopHour": {
+        "name": "定时结束小时"
+      },
+      "PeriodicActionStopMin": {
+        "name": "定时结束分钟"
+      },
+      "SleepStartHour": {
+        "name": "睡眠开始小时"
+      },
+      "SleepStartMin": {
+        "name": "睡眠开始分钟"
+      }
+    }
+  }
+}
